@@ -2,6 +2,7 @@
 using UnityEditor;
 #endif
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 namespace DitzelGames.FastIK
 {
@@ -19,7 +20,11 @@ namespace DitzelGames.FastIK
         /// Target the chain should bent to
         /// </summary>
         public Transform Target;
+        public Transform AcTarget;
+
         public Transform Pole;
+        public Transform TestAttraction;
+        public float AffectiveDistance;
 
         /// <summary>
         /// Solver iterations per update
@@ -108,6 +113,10 @@ namespace DitzelGames.FastIK
 
 
 
+        }
+
+        private void Update()
+        {
         }
 
         // Update is called once per frame
